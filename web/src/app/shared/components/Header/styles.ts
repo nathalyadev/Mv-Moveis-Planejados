@@ -6,7 +6,7 @@ export const NavigationHeader = styled.section`
 
   .content-image {
     img {
-      width: 2.875em;
+      width: 2.5em;
     }
   }
 

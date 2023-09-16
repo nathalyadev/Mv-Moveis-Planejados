@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Logo } from "../../assets";
+import { logo } from "../../assets";
 import { routesConfigs } from "../../configs/routes";
 import { NavigationHeader, DropDown } from "./styles";
 
@@ -9,7 +9,7 @@ export function Header() {
     <>
       <NavigationHeader>
         <div className="content-image">
-          <img src={Logo} alt="" />
+          <img src={logo} alt="" />
         </div>
 
         <ul>
