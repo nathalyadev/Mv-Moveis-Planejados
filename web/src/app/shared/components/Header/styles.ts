@@ -23,35 +23,54 @@ export const NavigationHeader = styled.section`
       font-weight: 400;
       line-height: normal;
       font-size: 1.25em;
+      position: relative;
     }
+  }
+
+  a {
+  }
+  li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 3px;
+    background-color: #18272f;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  li:hover::before { 
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  .dropdown:hover .dropdown-child {
+    display: block;
   }
 `;
 
 export const DropDown = styled.div`
-.dropdown {
-
-  position: relative;    
-  display: inline-block;
-}
-
-
-.dropdown-child {
-  display: none;
-  position: absolute;
-  background-color: red;
-  min-width: 160px;
-  width: 100%;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
-
-  a {
-    padding: 1em;
-display: block;
+  .dropdown {
+    position: relative;
+    display: inline-block;
   }
-}
 
-.dropdown:hover .dropdown-child {
-  display: block;
-}
+  .dropdown-child {
+    display: none;
+    position: absolute;
+    max-width: 240px;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    font-size: 0.8em;
+
+    a {
+      padding: 1em;
+      display: block;
+    }
+  }
 `;

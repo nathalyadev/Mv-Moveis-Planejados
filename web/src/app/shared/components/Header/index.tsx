@@ -20,8 +20,8 @@ export function Header() {
             <li>Projetos</li>
           </Link>
 
-          <DropDown>
-            <li className="dropdown">Departamentos</li>
+          <DropDown className="dropdown">
+            <li>Departamentos</li>
             <div className="dropdown-child">
               <Link to={routesConfigs.KITCHEN_DEPARTMENT}>
                 <li>Cozinha</li>
